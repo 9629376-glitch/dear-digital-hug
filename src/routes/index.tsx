@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Camera,
@@ -9,11 +10,14 @@ import {
   MapPin,
   Calendar,
   Clock,
+  ZoomIn,
 } from "lucide-react";
 
 import { Sidebar } from "@/components/Sidebar";
 import { Footer } from "@/components/Footer";
 import { StarField } from "@/components/StarField";
+import { BottomNav } from "@/components/BottomNav";
+import { Lightbox } from "@/components/Lightbox";
 
 import heroBg from "@/assets/hero-bg.jpg";
 import mem1 from "@/assets/mem1.jpg";
@@ -46,12 +50,12 @@ const TIMELINE = [
 ];
 
 const ALBUM = [
-  { img: mem1, tag: "2021 · 九月", title: "开学第一天" },
-  { img: mem2, tag: "2022 · 十月", title: "运动会加油" },
-  { img: mem3, tag: "2023 · 春", title: "晚自习课桌" },
-  { img: mem4, tag: "2023 · 四月", title: "樱花树下" },
-  { img: mem5, tag: "2023 · 夏", title: "教室的午后" },
-  { img: mem6, tag: "2024 · 六月", title: "毕业那天" },
+  { img: mem1, tag: "2021年9月1日", title: "开学第一天" },
+  { img: mem2, tag: "2022年10月15日", title: "运动会加油" },
+  { img: mem3, tag: "2023年3月8日", title: "晚自习课桌" },
+  { img: mem4, tag: "2023年4月6日", title: "樱花树下" },
+  { img: mem5, tag: "2023年7月20日", title: "教室的午后" },
+  { img: mem6, tag: "2024年6月28日", title: "毕业那天" },
 ];
 
 const WORDS = [
@@ -111,9 +115,17 @@ function SectionHeading({
 }
 
 function Index() {
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen pb-24 lg:pb-0">
       <StarField />
+      <Lightbox
+        photos={ALBUM}
+        index={lightbox}
+        onClose={() => setLightbox(null)}
+        onNav={setLightbox}
+      />
 
       <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
         <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
@@ -203,27 +215,40 @@ function Index() {
             {/* album */}
             <section id="album" className="glass rounded-3xl p-7 sm:p-9">
               <SectionHeading icon={Camera}>我们的相册</SectionHeading>
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-                {ALBUM.map((a) => (
-                  <figure
-                    key={a.title}
-                    className="group relative overflow-hidden rounded-2xl shadow-soft"
-                  >
-                    <img
-                      src={a.img}
-                      alt={a.title}
-                      loading="lazy"
-                      width={768}
-                      height={768}
-                      className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-3">
-                      <p className="text-[11px] text-white/80">{a.tag}</p>
-                      <p className="text-sm font-medium text-white">{a.title}</p>
-                    </figcaption>
-                  </figure>
+              <p className="mb-6 text-sm text-muted-foreground">
+                按时间排序 · 点击任意照片可放大查看。
+              </p>
+              <div className="space-y-6">
+                {ALBUM.map((a, i) => (
+                  <div key={a.title} className="flex flex-col gap-3">
+                    <p className="flex items-center gap-2 font-display text-base text-brand">
+                      <Calendar className="h-4 w-4 text-accent" /> {a.tag}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setLightbox(i)}
+                      aria-label={`放大查看：${a.title}`}
+                      className="group relative overflow-hidden rounded-2xl shadow-soft"
+                    >
+                      <img
+                        src={a.img}
+                        alt={a.title}
+                        loading="lazy"
+                        width={768}
+                        height={768}
+                        className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <span className="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100">
+                        <ZoomIn className="h-4 w-4" />
+                      </span>
+                      <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-3 text-left">
+                        <span className="text-sm font-medium text-white">{a.title}</span>
+                      </span>
+                    </button>
+                  </div>
                 ))}
               </div>
+
             </section>
 
             {/* words */}
@@ -291,6 +316,8 @@ function Index() {
           </main>
         </div>
       </div>
+
+      <BottomNav />
     </div>
   );
 }
