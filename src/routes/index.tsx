@@ -115,9 +115,17 @@ function SectionHeading({
 }
 
 function Index() {
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen pb-24 lg:pb-0">
       <StarField />
+      <Lightbox
+        photos={ALBUM}
+        index={lightbox}
+        onClose={() => setLightbox(null)}
+        onNav={setLightbox}
+      />
 
       <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
         <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
