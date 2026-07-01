@@ -50,12 +50,12 @@ const TIMELINE = [
 ];
 
 const ALBUM = [
-  { img: mem1, tag: "2021 · 九月", title: "开学第一天" },
-  { img: mem2, tag: "2022 · 十月", title: "运动会加油" },
-  { img: mem3, tag: "2023 · 春", title: "晚自习课桌" },
-  { img: mem4, tag: "2023 · 四月", title: "樱花树下" },
-  { img: mem5, tag: "2023 · 夏", title: "教室的午后" },
-  { img: mem6, tag: "2024 · 六月", title: "毕业那天" },
+  { img: mem1, tag: "2021年9月1日", title: "开学第一天" },
+  { img: mem2, tag: "2022年10月15日", title: "运动会加油" },
+  { img: mem3, tag: "2023年3月8日", title: "晚自习课桌" },
+  { img: mem4, tag: "2023年4月6日", title: "樱花树下" },
+  { img: mem5, tag: "2023年7月20日", title: "教室的午后" },
+  { img: mem6, tag: "2024年6月28日", title: "毕业那天" },
 ];
 
 const WORDS = [
