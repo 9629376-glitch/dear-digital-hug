@@ -316,6 +316,8 @@ function Index() {
           </main>
         </div>
       </div>
+
+      <BottomNav />
     </div>
   );
 }
