@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Github, MessageCircle, Music2, Mail, Heart } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const NAV = [
   { id: "about", label: "关于", icon: Heart },
@@ -12,19 +13,21 @@ const NAV = [
 ];
 
 const SOCIALS = [
-  { icon: Github, label: "GitHub", href: "#" },
+  { icon: Github, label: "GitHub", href: "https://github.com" },
   { icon: MessageCircle, label: "留言", href: "#contact" },
-  { icon: Music2, label: "音乐", href: "#" },
+  { icon: Music2, label: "音乐", href: "https://music.163.com" },
   { icon: Mail, label: "邮箱", href: "#contact" },
 ];
 
-/** Days since a fixed date, ticking every second. */
+/** Days since a fixed date, ticking every second. Null until mounted to avoid SSR mismatch. */
 function useElapsed(from: string) {
-  const [now, setNow] = useState(() => Date.now());
+  const [now, setNow] = useState<number | null>(null);
   useEffect(() => {
+    setNow(Date.now());
     const t = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(t);
   }, []);
+  if (now === null) return null;
   const diff = Math.max(0, now - new Date(from).getTime());
   const days = Math.floor(diff / 86400000);
   const h = Math.floor((diff % 86400000) / 3600000);
@@ -37,6 +40,7 @@ export function Sidebar() {
   const [active, setActive] = useState("about");
   const apart = useElapsed("2024-06-28T00:00:00");
   const known = useElapsed("2021-09-01T00:00:00");
+
 
   useEffect(() => {
     const obs = new IntersectionObserver(
