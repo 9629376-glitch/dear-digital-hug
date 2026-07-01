@@ -215,27 +215,40 @@ function Index() {
             {/* album */}
             <section id="album" className="glass rounded-3xl p-7 sm:p-9">
               <SectionHeading icon={Camera}>我们的相册</SectionHeading>
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-                {ALBUM.map((a) => (
-                  <figure
-                    key={a.title}
-                    className="group relative overflow-hidden rounded-2xl shadow-soft"
-                  >
-                    <img
-                      src={a.img}
-                      alt={a.title}
-                      loading="lazy"
-                      width={768}
-                      height={768}
-                      className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-3">
-                      <p className="text-[11px] text-white/80">{a.tag}</p>
-                      <p className="text-sm font-medium text-white">{a.title}</p>
-                    </figcaption>
-                  </figure>
+              <p className="mb-6 text-sm text-muted-foreground">
+                按时间排序 · 点击任意照片可放大查看。
+              </p>
+              <div className="space-y-6">
+                {ALBUM.map((a, i) => (
+                  <div key={a.title} className="flex flex-col gap-3">
+                    <p className="flex items-center gap-2 font-display text-base text-brand">
+                      <Calendar className="h-4 w-4 text-accent" /> {a.tag}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setLightbox(i)}
+                      aria-label={`放大查看：${a.title}`}
+                      className="group relative overflow-hidden rounded-2xl shadow-soft"
+                    >
+                      <img
+                        src={a.img}
+                        alt={a.title}
+                        loading="lazy"
+                        width={768}
+                        height={768}
+                        className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <span className="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100">
+                        <ZoomIn className="h-4 w-4" />
+                      </span>
+                      <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-3 text-left">
+                        <span className="text-sm font-medium text-white">{a.title}</span>
+                      </span>
+                    </button>
+                  </div>
                 ))}
               </div>
+
             </section>
 
             {/* words */}
