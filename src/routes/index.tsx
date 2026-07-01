@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Camera,
@@ -9,11 +10,14 @@ import {
   MapPin,
   Calendar,
   Clock,
+  ZoomIn,
 } from "lucide-react";
 
 import { Sidebar } from "@/components/Sidebar";
 import { Footer } from "@/components/Footer";
 import { StarField } from "@/components/StarField";
+import { BottomNav } from "@/components/BottomNav";
+import { Lightbox } from "@/components/Lightbox";
 
 import heroBg from "@/assets/hero-bg.jpg";
 import mem1 from "@/assets/mem1.jpg";
