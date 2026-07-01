@@ -100,8 +100,13 @@ export function Sidebar() {
         ))}
       </div>
 
-      {/* nav */}
-      <nav className="mt-6 space-y-1.5">
+      {/* theme toggle */}
+      <div className="mt-5 flex justify-center">
+        <ThemeToggle />
+      </div>
+
+      {/* nav (desktop only — bottom bar handles mobile) */}
+      <nav className="mt-6 hidden space-y-1.5 lg:block">
         {NAV.map((n) => {
           const on = active === n.id;
           return (
@@ -126,17 +131,18 @@ export function Sidebar() {
         <div className="rounded-2xl glass-soft px-4 py-3 text-center">
           <p className="text-[13px] text-muted-foreground">
             我们分开的第{" "}
-            <span className="font-semibold text-primary">{apart.days}</span> 天{" "}
+            <span className="font-semibold text-primary">{apart ? apart.days : "…"}</span> 天{" "}
             <span className="tabular-nums text-primary/90">
-              {String(apart.h).padStart(2, "0")}:{String(apart.m).padStart(2, "0")}:
-              {String(apart.s).padStart(2, "0")}
+              {apart
+                ? `${String(apart.h).padStart(2, "0")}:${String(apart.m).padStart(2, "0")}:${String(apart.s).padStart(2, "0")}`
+                : "00:00:00"}
             </span>
           </p>
         </div>
         <div className="rounded-2xl glass-soft px-4 py-3 text-center">
           <p className="text-[13px] text-muted-foreground">
             我们相识{" "}
-            <span className="font-semibold text-accent">{known.days}</span> 天，一起写过无数张试卷。
+            <span className="font-semibold text-accent">{known ? known.days : "…"}</span> 天，一起写过无数张试卷。
           </p>
         </div>
       </div>
