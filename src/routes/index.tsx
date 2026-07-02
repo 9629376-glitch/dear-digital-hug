@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
 
 const STATS = [
   { big: "我们六个", small: "小小的班级" },
-  { big: "阳光中学", small: "母校" },
+  { big: "海南华侨中学", small: "母校" },
   { big: "1000+ 天", small: "在一起" },
   { big: "数不清", small: "写过的作业" },
   { big: "上千包", small: "偷吃的辣条" },
@@ -45,34 +45,44 @@ const TIMELINE = [
   { date: "2022.05", title: "第一次春游", desc: "山顶的风很大，拍出了最好看的合照。" },
   { date: "2022.10", title: "秋季运动会", desc: "我们六个喊加油喊到嗓子哑掉。" },
   { date: "2023.01", title: "元旦晚会", desc: "谁也没想到会在讲台上唱那么难听的歌。" },
-  { date: "2023.06", title: "中考誓师", desc: "把所有想说的话写在气球上，一起放飞。" },
-  { date: "2024.06", title: "毕业典礼", desc: "校服签满了名字，眼泪也停不下来。" },
+  { date: "2026.03", title: "中考誓师", desc: "把所有想说的话写在气球上，一起放飞。" },
+  { date: "2026.06", title: "毕业典礼", desc: "校服签满了名字，眼泪也停不下来。" },
 ];
 
 const ALBUM = [
-  { img: mem1, tag: "2021年9月1日", title: "开学第一天" },
+  { img: mem1, tag: "2023年9月1日", title: "开学第一天" },
   { img: mem2, tag: "2022年10月15日", title: "运动会加油" },
   { img: mem3, tag: "2023年3月8日", title: "晚自习课桌" },
   { img: mem4, tag: "2023年4月6日", title: "樱花树下" },
   { img: mem5, tag: "2023年7月20日", title: "教室的午后" },
-  { img: mem6, tag: "2024年6月28日", title: "毕业那天" },
+  { img: mem6, tag: "2026年6月23日", title: "毕业那天" },
 ];
 
 const WORDS = [
   {
-    to: "致 小言",
-    body: "谢谢你在我数学考砸的那次没有笑我，反而把你的错题本借给我抄了一整晚。以后每次翻到那本本子，我都会想起你写字很认真的样子。",
-    from: "—— 你的同桌",
+    to: "致 小琪",
+    body: "小琪，毕业快乐。你的英语一直都很厉害，也很稳定。以后不管去哪，希望你都能继续保持这种从容和优秀，前路一定会很亮。",
+    from: "—— 小跃",
   },
   {
-    to: "致 阿星",
-    body: "运动会最后一棒，你摔倒了还爬起来跑完。那一刻我才知道什么叫「不甘心」。愿你以后走的每一段路，都能这样跑到终点。",
-    from: "—— 后排的我",
+    to: "致 小霖",
+    body: "小霖，毕业快乐。你平时有点调皮，但也正因为这样，班里才没那么无聊。以后收着点玩，别把“调皮”带进新环境了😂",
+    from: "—— 小跃",
   },
   {
-    to: "致 喵喵",
-    body: "你借出去的笔从来没收回来过，但你的笑一直都还在。愿你去到再远的城市，也永远这么爱笑。",
-    from: "—— 你借过笔的人",
+    to: "致 小翘",
+    body: "小翘，平时你话不多，总是安安静静的，但其实一直都有在默默努力。愿你未来的路，也能这样安稳而坚定地走下去。",
+    from: "—— 小跃",
+  },
+  {
+    to: "致 小娇",
+    body: "小娇，你一直都很爱笑，好像有你在的地方就会轻松很多。希望以后也能一直这样，把快乐带到更远的地方。",
+    from: "—— 小跃",
+  },
+  {
+    to: "致 小义",
+    body: "小义，你的存在总是很热闹，像是教室里自带的舞台。希望以后你也能一直这样，自信地站在属于自己的地方发光。",
+    from: "—— 小跃",
   },
   {
     to: "致 我们六个",
@@ -82,18 +92,18 @@ const WORDS = [
 ];
 
 const PEOPLE = [
-  { g: "言", name: "小言", seat: "1 号座位", role: "组长兼树洞" },
-  { g: "忆", name: "小忆", seat: "6 号座位", role: "永远的同桌" },
-  { g: "星", name: "阿星", seat: "22 号座位", role: "篮球队队长" },
-  { g: "喵", name: "喵喵", seat: "18 号座位", role: "英语课代表" },
-  { g: "北", name: "小北", seat: "12 号座位", role: "画黑板报的人" },
-  { g: "橙", name: "阿橙", seat: "9 号座位", role: "开心果" },
+  { g: "跃", name: "小跃", role: "啥也不是" },
+  { g: "琪", name: "小琪", role: "英语课代表" },
+  { g: "霖", name: "小霖", role: "英语课代表" },
+  { g: "翘", name: "小翘", role: "无名的人" },
+  { g: "娇", name: "小娇", role: "无名的人" },
+  { g: "义", name: "小义", role: "开心果" },
 ];
 
 const CONTACT = [
   { icon: Mail, label: "我们的邮箱", value: "class-of-2024@memory.site" },
-  { icon: Users, label: "我们的群", value: "我们六个 · 永不散" },
-  { icon: Calendar, label: "十年后重聚", value: "阳光中学 · 大门口" },
+  { icon: Users, label: "我们的群", value: "宝爸宝妈育儿交流群🐢" },
+  { icon: Calendar, label: "十年后重聚", value: "海南华侨中学 · 大门口" },
   { icon: Clock, label: "重聚日期", value: "2034 · 六月的某天" },
 ];
 
@@ -155,7 +165,7 @@ function Index() {
                 </h1>
                 <p className="mt-4 max-w-lg text-sm leading-relaxed text-foreground/80 sm:text-base">
                   三年，一间教室，六个人。 这里没有排名，没有作业，只有那些「你还记得吗」——
-                  把散落在校服口袋里的碎片，重新拼成可以回头翻看的青春。
+                  把散落在校服口袋里的碎片，重新拼成可以回头翻看的青春。就算如今，天各一方，把回忆拼好给你。
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <a
@@ -178,9 +188,9 @@ function Index() {
             <section id="about" className="glass rounded-3xl p-7 sm:p-9">
               <SectionHeading icon={Heart}>关于我们六个</SectionHeading>
               <p className="text-sm leading-relaxed text-foreground/80 sm:text-[15px]">
-                我们是 阳光中学 的六个同学。从 2021 年九月的开学典礼开始，到 2024
+                我们是 海南华侨中学 的六个同学。从 2023 年九月的开学典礼开始，到 2026
                 年六月的毕业典礼结束，我们一起走过了 1000 多个日夜。 这个小站不为任何人，只为我们六个
-                —— 把黑板上没擦干净的字、 后排偷笑的表情、走廊里的追逐，重新收进一间只属于我们的教室。
+                —— 虽然我们初三才玩到一起，时间不算长，但留下的回忆一点也不少。感谢这场相遇，让平凡的初三多了许多欢笑。这份友情，值得被记录。
               </p>
               <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {STATS.map((s) => (
