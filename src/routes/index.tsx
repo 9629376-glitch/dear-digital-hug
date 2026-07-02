@@ -158,7 +158,7 @@ function Index() {
               <div className="absolute inset-0 bg-gradient-to-tr from-white/70 via-white/40 to-transparent" />
               <div className="relative p-8 sm:p-11">
                 <p className="text-xs font-medium tracking-[0.3em] text-primary/80">
-                  SINCE 2021 ·
+                  SINCE 2023 ·
                 </p>
                 <h1 className="mt-3 font-display text-4xl leading-tight text-foreground sm:text-5xl">
                   我们的 <span className="text-brand">初中毕业纪念站</span>
