@@ -1,4 +1,43 @@
 import { useEffect, useState } from "react";
+function CountUp({ value }: { value: number }) {
+  const [display, setDisplay] = useState(0);
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    let start = display;
+    const target = value;
+    const duration = 500;
+    const startTime = performance.now();
+
+    const frame = (now: number) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const current = Math.floor(start + (target - start) * progress);
+
+      setDisplay(current);
+
+      if (progress < 1) {
+        requestAnimationFrame(frame);
+      }
+    };
+
+    requestAnimationFrame(frame);
+
+    setAnimate(true);
+    const t = setTimeout(() => setAnimate(false), 120);
+    return () => clearTimeout(t);
+  }, [value]);
+
+  return (
+    <span
+      className={`inline-block transition-transform duration-150 ${
+        animate ? "scale-125" : "scale-100"
+      }`}
+    >
+      {display}
+    </span>
+  );
+}
+import { useEffect, useState } from "react";
 import { Github, MessageCircle, Music2, Mail, Heart } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -131,7 +170,7 @@ export function Sidebar() {
         <div className="rounded-2xl glass-soft px-4 py-3 text-center">
           <p className="text-[13px] text-muted-foreground">
             我们分开的第{" "}
-            <span className="font-semibold text-primary">{apart ? apart.days : "…"}</span> 天{" "}
+            {apart ? <CountUp value={apart.days} /> : "…"}
             <span className="tabular-nums text-primary/90">
               {apart
                 ? `${String(apart.h).padStart(2, "0")}:${String(apart.m).padStart(2, "0")}:${String(apart.s).padStart(2, "0")}`
