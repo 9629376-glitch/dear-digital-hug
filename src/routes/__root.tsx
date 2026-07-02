@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "三年，一间教室，六个人。把散落在校服口袋里的碎片，重新拼成可以回头翻看的青春 —— 我们六个的毕业纪念小站。",
+          "三年，一间教室，六个人。把散落在校服口袋里的碎片，重新拼成可以回头翻看的青春 —— 我们六人的毕业纪念小站。",
       },
       { name: "author", content: "我们" },
       { property: "og:title", content: "我们的毕业纪念小站" },
