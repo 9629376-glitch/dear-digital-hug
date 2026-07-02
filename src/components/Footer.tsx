@@ -12,7 +12,7 @@ const SPONSORS: Sponsor[] = [
   {
     category: "服务器",
     categoryIcon: Server,
-    name: "VPS.Town",
+    name: "VPS.Town | 共建云上新生态",
     href: "https://vps.town",
     image: "https://s1.img-e.com/20260701/6a452703d8d67.png",
   },
