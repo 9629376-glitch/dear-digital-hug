@@ -80,7 +80,7 @@ export function Sidebar() {
           CLASS OF 2026
         </span>
         <h1 className="mt-3 font-display text-2xl text-brand">我们六个</h1>
-        <p className="mt-1 text-xs text-muted-foreground">阳光中学 · 毕业纪念小站</p>
+        <p className="mt-1 text-xs text-muted-foreground">海南华侨中学 · 毕业纪念小站</p>
         <p className="mt-3 text-[13px] leading-relaxed text-muted-foreground">
           愿多年以后，我们六个还是那群穿着侨中校服的人。
         </p>
