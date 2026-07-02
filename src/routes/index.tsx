@@ -95,8 +95,8 @@ const PEOPLE = [
   { g: "跃", name: "小跃", role: "啥也不是" },
   { g: "琪", name: "小琪", role: "英语课代表" },
   { g: "霖", name: "小霖", role: "英语课代表" },
-  { g: "翘", name: "小翘", role: "无名的人" },
-  { g: "娇", name: "小娇", role: "无名的人" },
+  { g: "翘", name: "小翘", role: "安安静静" },
+  { g: "娇", name: "小娇", role: "爱笑的人" },
   { g: "义", name: "小义", role: "开心果" },
 ];
 
@@ -104,7 +104,7 @@ const CONTACT = [
   { icon: Mail, label: "我们的邮箱", value: "class-of-2024@memory.site" },
   { icon: Users, label: "我们的群", value: "宝爸宝妈育儿交流群🐢" },
   { icon: Calendar, label: "十年后重聚", value: "海南华侨中学 · 大门口" },
-  { icon: Clock, label: "重聚日期", value: "2034 · 六月的某天" },
+  { icon: Clock, label: "重聚日期", value: "2036 · 六月的某天" },
 ];
 
 function SectionHeading({
