@@ -1,42 +1,4 @@
 import { useEffect, useState } from "react";
-function CountUp({ value }: { value: number }) {
-  const [display, setDisplay] = useState(0);
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    let start = display;
-    const target = value;
-    const duration = 500;
-    const startTime = performance.now();
-
-    const frame = (now: number) => {
-      const progress = Math.min((now - startTime) / duration, 1);
-      const current = Math.floor(start + (target - start) * progress);
-
-      setDisplay(current);
-
-      if (progress < 1) {
-        requestAnimationFrame(frame);
-      }
-    };
-
-    requestAnimationFrame(frame);
-
-    setAnimate(true);
-    const t = setTimeout(() => setAnimate(false), 120);
-    return () => clearTimeout(t);
-  }, [value]);
-
-  return (
-    <span
-      className={`inline-block transition-transform duration-150 ${
-        animate ? "scale-125" : "scale-100"
-      }`}
-    >
-      {display}
-    </span>
-  );
-}
 import { Github, MessageCircle, Music2, Mail, Heart } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
 import { ThemeToggle } from "@/components/ThemeToggle";
