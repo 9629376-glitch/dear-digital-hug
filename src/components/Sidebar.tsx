@@ -37,7 +37,6 @@ function CountUp({ value }: { value: number }) {
     </span>
   );
 }
-import { useEffect, useState } from "react";
 import { Github, MessageCircle, Music2, Mail, Heart } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
 import { ThemeToggle } from "@/components/ThemeToggle";
