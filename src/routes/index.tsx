@@ -51,8 +51,8 @@ const TIMELINE = [
 ];
 
 const ALBUM = [
-  { img: mem1, tag: "2023年9月1日", title: "开学第一天" },
-  { img: mem2, tag: "2022年10月15日", title: "运动会加油" },
+  { img: mem1, tag: "2026年04月04日", title: "第二次聚餐" },
+  { img: mem2, tag: "2026年04月30日", title: "第三次聚餐" },
   { img: mem3, tag: "2023年3月8日", title: "晚自习课桌" },
   { img: mem4, tag: "2023年4月6日", title: "樱花树下" },
   { img: mem5, tag: "2023年7月20日", title: "教室的午后" },
