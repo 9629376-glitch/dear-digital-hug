@@ -20,7 +20,7 @@ const SPONSORS: Sponsor[] = [
     category: "CDN",
     categoryIcon: Zap,
     name: "Cloudflare",
-    href: "https://dash.cloudflare.com",
+    href: "https://www.cloudflare-cn.com/personal/",
     image: "https://img.xwyue.com/i/2026/07/02/6a45f2fd263f4.png",
   },
 ];
