@@ -34,9 +34,9 @@ export const Route = createFileRoute("/")({
 const STATS = [
   { big: "我们六个", small: "小小的班级" },
   { big: "海南华侨中学", small: "母校" },
-  { big: "1000+ 天", small: "在一起" },
+  { big: "1000+ 天", small: "在校的时间" },
   { big: "数不清", small: "写过的作业" },
-  { big: "上千包", small: "偷吃的辣条" },
+  { big: "上千步", small: "走进学校门口" },
   { big: "考上想去的高中", small: "共同的梦想" },
 ];
 
