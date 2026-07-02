@@ -20,7 +20,7 @@ import { BottomNav } from "@/components/BottomNav";
 import { Lightbox } from "@/components/Lightbox";
 
 import heroBg from "@/assets/hero-bg.jpg";
-import mem1 from "@/assets/mem1.jpg";
+import mem1 from "@/assets/mem1.JPG";
 import mem2 from "@/assets/mem2.jpg";
 import mem3 from "@/assets/mem3.jpg";
 import mem4 from "@/assets/mem4.jpg";
