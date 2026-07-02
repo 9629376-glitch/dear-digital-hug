@@ -104,7 +104,7 @@ const PEOPLE = [
 const CONTACT = [
   { icon: Mail, label: "我们的邮箱", value: "还没有" },
   { icon: Users, label: "我们的群", value: "宝爸宝妈育儿交流群🐢" },
-  { icon: Calendar, label: "十年后重聚", value: "海南华侨中学 · 大门口" },
+  { icon: Calendar, label: "十年后重聚", value: "海南华侨中学" },
   { icon: Clock, label: "重聚日期", value: "2036 · 六月的某天" },
 ];
 
