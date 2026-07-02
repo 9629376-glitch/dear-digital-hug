@@ -72,7 +72,7 @@ export function Footer() {
 
         <div className="mt-8 flex flex-col items-center gap-1 border-t border-border/60 pt-6 text-center">
           <p className="flex items-center gap-1.5 text-[13px] text-muted-foreground">
-            用 <Heart className="h-3.5 w-3.5 fill-blush text-blush" /> 记录，我们六个 · 永不散
+            用 <Heart className="h-3.5 w-3.5 fill-blush text-blush" /> 记录，我们永不散！
           </p>
           <p className="text-xs text-muted-foreground/80">
             © {new Date().getFullYear()} 海南华侨中学 · 毕业纪念小站
