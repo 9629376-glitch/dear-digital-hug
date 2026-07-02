@@ -284,7 +284,7 @@ function Index() {
 
             {/* people */}
             <section id="people" className="glass rounded-3xl p-7 sm:p-9">
-              <SectionHeading icon={Users}>我们</SectionHeading>
+              <SectionHeading icon={Users}>我们六人</SectionHeading>
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                 {PEOPLE.map((p) => (
                   <div
