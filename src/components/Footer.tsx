@@ -19,9 +19,9 @@ const SPONSORS: Sponsor[] = [
   {
     category: "CDN",
     categoryIcon: Zap,
-    name: "Hostoocdn",
-    href: "https://hostoo.net",
-    image: "https://s1.img-e.com/20260701/6a45270782ea2.webp",
+    name: "Cloudflare",
+    href: "https://dash.cloudflare.com",
+    image: "https://img.xwyue.com/i/2026/07/02/6a45f2fd263f4.png",
   },
 ];
 
@@ -75,7 +75,7 @@ export function Footer() {
             用 <Heart className="h-3.5 w-3.5 fill-blush text-blush" /> 记录，我们六个 · 永不散
           </p>
           <p className="text-xs text-muted-foreground/80">
-            © {new Date().getFullYear()} 阳光中学 · 毕业纪念小站
+            © {new Date().getFullYear()} 海南华侨中学 · 毕业纪念小站
           </p>
         </div>
       </div>
