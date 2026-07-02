@@ -131,7 +131,7 @@ export function Sidebar() {
         <div className="rounded-2xl glass-soft px-4 py-3 text-center">
           <p className="text-[13px] text-muted-foreground">
             我们分开的第{" "}
-            {apart ? <CountUp value={apart.days} /> : "…"}
+            <span className="font-semibold text-primary">{apart ? apart.days : "…"}</span> 天{" "}
             <span className="tabular-nums text-primary/90">
               {apart
                 ? `${String(apart.h).padStart(2, "0")}:${String(apart.m).padStart(2, "0")}:${String(apart.s).padStart(2, "0")}`
