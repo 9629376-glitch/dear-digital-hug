@@ -82,7 +82,7 @@ export function Sidebar() {
         <h1 className="mt-3 font-display text-2xl text-brand">The six of us</h1>
         <p className="mt-1 text-xs text-muted-foreground">感谢您花5分钟来阅读我们的纪念小站❤️</p>
         <p className="mt-3 text-[13px] leading-relaxed text-muted-foreground">
-          愿多年以后我们还能再见面
+          愿多年以后我们还能再见面！
         </p>
       </div>
 
