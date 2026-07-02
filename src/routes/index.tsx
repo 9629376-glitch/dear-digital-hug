@@ -21,7 +21,7 @@ import { Lightbox } from "@/components/Lightbox";
 
 import heroBg from "@/assets/hero-bg.jpg";
 import mem1 from "@/assets/mem1.JPG";
-import mem2 from "@/assets/mem2.jpg";
+import mem2 from "@/assets/mem2.JPG";
 import mem3 from "@/assets/mem3.jpg";
 import mem4 from "@/assets/mem4.jpg";
 import mem5 from "@/assets/mem5.jpg";
