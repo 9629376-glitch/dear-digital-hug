@@ -53,10 +53,6 @@ const TIMELINE = [
 const ALBUM = [
   { img: mem1, tag: "2026年4月4日", title: "第二次聚餐" },
   { img: mem2, tag: "2026年4月30日", title: "第三次聚餐" },
-  { img: mem3, tag: "2023年3月8日", title: "晚自习课桌" },
-  { img: mem4, tag: "2023年4月6日", title: "樱花树下" },
-  { img: mem5, tag: "2023年7月20日", title: "教室的午后" },
-  { img: mem6, tag: "2026年6月23日", title: "毕业那天" },
 ];
 
 const WORDS = [
