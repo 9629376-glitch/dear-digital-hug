@@ -14,7 +14,7 @@ const SPONSORS: Sponsor[] = [
     categoryIcon: Server,
     name: "VPS.Town | 共建云上新生态",
     href: "https://vps.town",
-    image: "https://img.xwyue.com/i/2026/07/02/6a462414b1285.png",
+    image: "https://img.xwyue.com/i/2026/07/02/6a4624feb9883.webp",
   },
   {
     category: "CDN",
