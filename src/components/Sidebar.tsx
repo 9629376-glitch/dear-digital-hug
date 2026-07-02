@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Github, MessageCircle, Music2, Mail, Heart } from "lucide-react";
-import avatar from "@/assets/avatar.jpg";
+import avatar from "@/assets/avatar.png";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const NAV = [
@@ -38,8 +38,8 @@ function useElapsed(from: string) {
 
 export function Sidebar() {
   const [active, setActive] = useState("about");
-  const apart = useElapsed("2024-06-28T00:00:00");
-  const known = useElapsed("2021-09-01T00:00:00");
+  const apart = useElapsed("2026-06-26T00:00:00");
+  const known = useElapsed("2023-09-01T00:00:00");
 
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export function Sidebar() {
         <h1 className="mt-3 font-display text-2xl text-brand">我们六个</h1>
         <p className="mt-1 text-xs text-muted-foreground">阳光中学 · 毕业纪念小站</p>
         <p className="mt-3 text-[13px] leading-relaxed text-muted-foreground">
-          愿多年以后，我们六个还是那群穿着蓝白校服的人。
+          愿多年以后，我们六个还是那群穿着侨中校服的人。
         </p>
       </div>
 
