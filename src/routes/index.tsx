@@ -32,11 +32,11 @@ export const Route = createFileRoute("/")({
 });
 
 const STATS = [
-  { big: "我们六个", small: "小小的班级" },
+  { big: "我们六个", small: "小小的群体" },
   { big: "海南华侨中学", small: "母校" },
   { big: "1000+ 天", small: "在校的时间" },
   { big: "数不清", small: "写过的作业" },
-  { big: "上千步", small: "走进学校门口" },
+  { big: "写不完", small: "发下的试卷" },
   { big: "考上想去的高中", small: "共同的梦想" },
 ];
 
@@ -61,7 +61,7 @@ const ALBUM = [
 
 const WORDS = [
   {
-    to: "致 小琪",
+    to: "致 小渲",
     body: "小琪，毕业快乐。你的英语一直都很厉害，也很稳定。以后不管去哪，希望你都能继续保持这种从容和优秀，前路一定会很亮。",
     from: "—— 小跃",
   },
@@ -94,7 +94,7 @@ const WORDS = [
 
 const PEOPLE = [
   { g: "跃", name: "小跃", role: "啥也不是" },
-  { g: "琪", name: "小琪", role: "英语课代表" },
+  { g: "渲", name: "小渲", role: "英语课代表" },
   { g: "霖", name: "小霖", role: "英语课代表" },
   { g: "翘", name: "小翘", role: "安安静静" },
   { g: "娇", name: "小娇", role: "爱笑的人" },
