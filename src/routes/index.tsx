@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
 });
 
 const STATS = [
-  { big: "我们六个", small: "小小的群体" },
+  { big: "我们", small: "小小的群体" },
   { big: "海南华侨中学", small: "母校" },
   { big: "1000+ 天", small: "在校的时间" },
   { big: "数不清", small: "写过的作业" },
@@ -86,9 +86,9 @@ const WORDS = [
     from: "—— 小跃",
   },
   {
-    to: "致 我们六个",
+    to: "致 我们",
     body: "如果有一天你忘记了这段日子，就回到这个小站来看看。教室的灯还亮着，座位还留着，我们都在这里等你。",
-    from: "—— 我们",
+    from: "—— 小跃",
   },
 ];
 
@@ -102,7 +102,7 @@ const PEOPLE = [
 ];
 
 const CONTACT = [
-  { icon: Mail, label: "我们的邮箱", value: "class-of-2024@memory.site" },
+  { icon: Mail, label: "我们的邮箱", value: "还没有" },
   { icon: Users, label: "我们的群", value: "宝爸宝妈育儿交流群🐢" },
   { icon: Calendar, label: "十年后重聚", value: "海南华侨中学 · 大门口" },
   { icon: Clock, label: "重聚日期", value: "2036 · 六月的某天" },
@@ -187,10 +187,10 @@ function Index() {
 
             {/* about */}
             <section id="about" className="glass rounded-3xl p-7 sm:p-9">
-              <SectionHeading icon={Heart}>关于我们六个</SectionHeading>
+              <SectionHeading icon={Heart}>关于我们</SectionHeading>
               <p className="text-sm leading-relaxed text-foreground/80 sm:text-[15px]">
                 我们是 海南华侨中学 的六个同学。从 2023 年九月的开学典礼开始，到 2026
-                年六月的毕业典礼结束，我们一起走过了 1000 多个日夜。 这个小站不为任何人，只为我们六个
+                年六月的毕业典礼结束，我们一起走过了 1000 多个日夜。 这个小站不为任何人，只为我们
                 —— 虽然我们初三才玩到一起，时间不算长，但留下的回忆一点也不少。感谢这场相遇，让平凡的初三多了许多欢笑。这份友情，值得被记录。
               </p>
               <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -284,7 +284,7 @@ function Index() {
 
             {/* people */}
             <section id="people" className="glass rounded-3xl p-7 sm:p-9">
-              <SectionHeading icon={Users}>我们六个</SectionHeading>
+              <SectionHeading icon={Users}>我们</SectionHeading>
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                 {PEOPLE.map((p) => (
                   <div
