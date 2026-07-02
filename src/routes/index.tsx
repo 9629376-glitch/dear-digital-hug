@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
 });
 
 const STATS = [
-  { big: "我们", small: "小小的群体" },
+  { big: "我们六人", small: "小小的群体" },
   { big: "海南华侨中学", small: "母校" },
   { big: "1000+ 天", small: "在校的时间" },
   { big: "数不清", small: "写过的作业" },
