@@ -207,7 +207,7 @@ function Index() {
 
             {/* timeline */}
             <section id="timeline" className="glass rounded-3xl p-7 sm:p-9">
-              <SectionHeading icon={Sparkles}>三年时光轴</SectionHeading>
+              <SectionHeading icon={Sparkles}>时光轴</SectionHeading>
               <ol className="relative ml-3 space-y-6 border-l-2 border-border/70 pl-6">
                 {TIMELINE.map((t) => (
                   <li key={t.date} className="relative">
