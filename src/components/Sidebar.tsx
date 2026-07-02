@@ -79,10 +79,10 @@ export function Sidebar() {
         <span className="mt-4 rounded-full bg-secondary px-3 py-1 text-[11px] font-medium tracking-[0.25em] text-secondary-foreground">
           CLASS OF 2026
         </span>
-        <h1 className="mt-3 font-display text-2xl text-brand">我们六人</h1>
+        <h1 className="mt-3 font-display text-2xl text-brand">The six of us</h1>
         <p className="mt-1 text-xs text-muted-foreground">感谢您花5分钟来阅读我们的纪念小站❤️</p>
         <p className="mt-3 text-[13px] leading-relaxed text-muted-foreground">
-          愿多年以后，我们六人还是那群穿着侨中校服的人。
+          愿多年以后我们还能再见面
         </p>
       </div>
 
