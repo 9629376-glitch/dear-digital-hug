@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Github, MessageCircle, Music2, Mail, Heart } from "lucide-react";
-import avatar from "@/assets/avatar.jpg";
+import avatar from "@/assets/avatar.png";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const NAV = [
